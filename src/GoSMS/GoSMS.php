@@ -234,6 +234,8 @@ class GoSMS
                 throw new GoSMSException\Another('Another error');
             }
         }
+        
+        $this->recipients = [];
 
         return $response;
     }

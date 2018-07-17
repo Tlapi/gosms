@@ -231,7 +231,7 @@ class GoSMS
             } elseif ( $result->info->http_code === 500 ) {
                 throw new GoSMSException\ServerError('Server error');
             } else {
-                throw new GoSMSException\Another('Another error');
+                throw new GoSMSException\Another($response->error_description);
             }
         }
         
@@ -269,7 +269,7 @@ class GoSMS
             } elseif ( $result->info->http_code === 404 ) {
                 throw new GoSMSException\MessageNotFound('Message not found');
             } else {
-                throw new GoSMSException\Another('Another error');
+                throw new GoSMSException\Another($response->error_description);
             }
         }
 

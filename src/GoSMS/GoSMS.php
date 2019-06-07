@@ -283,7 +283,7 @@ class GoSMS
      */
     public function setRecipient($recipient)
     {
-        if ( ! preg_match('~^\+[0-9]{12}$~', $recipient) ) {
+        if ( ! preg_match('~^\+[0-9]{11,12}$~', $recipient) ) {
             throw new GoSMSException\InvalidFormat('Invalid recipient number format');
         }
 

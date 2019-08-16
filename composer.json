@@ -1,5 +1,5 @@
 {
-    "name": "fixsoftware/gosms",
+    "name": "tlapi/gosms",
     "description": "Sending messages via gosms.cz",
     "type": "library",
     "keywords": [

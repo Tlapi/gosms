@@ -327,7 +327,7 @@ class GoSMS
      */
     public function setChannel($channel)
     {
-        if ( ! is_int($channel) || ( $channel < 0 ) ) {
+        if ( ! strval(intval($channel)) == $channel || ( $channel < 0 ) ) {
             throw new GoSMSException\InvalidChannel('Invalid channel');
         }
 
